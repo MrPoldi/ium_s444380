@@ -1,0 +1,7 @@
+kaggle
+pandas
+scikit-learn
+tensorflow
+matplotlib
+sacred
+mlflow
