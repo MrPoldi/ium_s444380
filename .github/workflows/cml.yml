@@ -8,12 +8,12 @@ jobs:
             - uses: actions/setup-python@v4
             - uses: iterative/setup-cml@v1
             - name: Train and evaluate model
-                env:
-                    REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                run: |
-                    pip install -r requirements.txt
-                    python train_model.py
-                    python evaluate.py
-                    cat eval_results.csv >> report.md
-                    cml-publish plot.png --md >> report.md
-                    cml-send-comment report.md
+              env:
+                REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                pip install -r requirements.txt
+                python train_model.py
+                python evaluate.py
+                cat eval_results.csv >> report.md
+                cml-publish plot.png --md >> report.md
+                cml-send-comment report.md
